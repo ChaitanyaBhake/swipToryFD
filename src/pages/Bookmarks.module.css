@@ -1,0 +1,67 @@
+.bookmarkHeading {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.authHeading {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.userBookmarkDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    justify-content: space-around;
+}
+
+.noBookmarksAvalDiv {
+    position: absolute;
+    top: 10rem;
+    text-align: center;
+    color: red;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.noBookmarksHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .userBookmarkDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bookmarkHeading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .authHeading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .userBookmarkDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        justify-content: center;
+    }
+
+    .noBookmarksAvalDiv {
+        position: static;
+    }
+    .noBookmarksHeading {
+        margin-bottom: 0.3rem;
+    }
+}

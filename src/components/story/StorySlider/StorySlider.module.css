@@ -1,0 +1,142 @@
+.imageSliderCon {
+    width: 30vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Buttons CSS Starts */
+.buttonsDiv {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    left: 25%;
+
+}
+
+.nextBtn,
+.prevBtn {
+    top: 50%;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    border-radius: 50%;
+    background-color: rgb(231, 149, 149);
+}
+
+.nextBtn {
+    right: 10px;
+}
+
+.prevBtn {
+    left: 10px;
+}
+/* Buttons CSS Ends */
+
+
+/* Progress Bar CSS Start */
+
+.progressContainerDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 49%, rgba(23,22,22,1) 100%);
+    width: 30%;
+    height: 11vh;
+    border-top-left-radius: 10px; /* Border radius for bottom-left corner */
+    border-top-right-radius: 10px;
+}
+
+.progressBarDiv {
+    width: 15%;
+    height: 5px;
+    background-color: #d9d9d980;
+    overflow: hidden;
+    margin: 1rem;
+    
+}
+
+.showProgressDiv {
+    height: 100%;
+    background-color: #4aff86;
+    transition: width 0.1s linear;
+}
+
+.progressCompleted {
+    width: 100%;
+    background-color: rgb(226, 116, 116);
+}
+
+/* Progress Bar CSS Ends */
+
+
+/* Slider CSS Starts */
+.sliderImg {
+    height: 90vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sliderText {
+    position: relative;
+    bottom: 11rem;
+    margin: 1rem;
+}
+/* Slider CSS Ends */
+
+
+@media screen and (max-width: 768px) {
+    .imageSliderCon {
+        width: 100vw ;
+        height: 100vh ;
+    }
+
+    .progressContainerDiv {
+        width: 100%;
+        height: 12.5vh;
+    }
+
+    .buttonsDiv {
+        width: 100vw;
+        left: 0;
+    }
+
+    /* Slider CSS Starts */
+    .sliderText {
+        position: absolute;
+        bottom: 7rem;
+        left: 1rem;
+        width: 90%;
+        
+    }
+    .sliderHeading {
+        font-size: 1.8rem;
+    }
+    .slideDesc {
+        font-size: 0.8rem;
+    }
+    .sliderImg {
+        height: 100vh;
+    }
+    /* Slider CSS Ends */
+}

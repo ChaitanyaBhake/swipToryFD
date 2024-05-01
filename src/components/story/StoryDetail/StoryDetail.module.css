@@ -1,0 +1,84 @@
+.showStoryCon {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}
+
+.seeStoryDiv {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 30px 0 #ffffff40;
+    border-radius: 10px;
+}
+
+.closeShareIconDiv,
+.bookmarkHeartIconDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+    position: relative;
+    padding: 1rem 0;
+    z-index: 2;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.topIcons {
+    position: absolute;
+    top: 4rem;
+    width: 30%;
+    background: linear-gradient(180deg, #000000, transparent);
+}
+
+.closeBtnSvg,
+.shareBtnSvg,
+.bookmarkSvg,
+.heartSvg {
+    margin: 1rem;
+}
+
+.bottomIcons {
+    position: absolute;
+    bottom: 2rem;
+    width: 30%;
+    height: 10vh;
+    /* background: linear-gradient(0deg, black, transparent); */
+    background-color: #000000;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 49%, rgba(23,22,22,1) 100%);
+}
+
+.heartSvg {
+    display: inline-flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .showStoryCon,
+    .seeStoryDiv {
+        width: 100%;
+        height: 100%;
+    }
+    .topIcons {
+        position: absolute;
+        top: 2rem;
+        width: 100%;
+    }
+    .bottomIcons {
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        height: 10vh;
+        /* background: linear-gradient(0deg, black, transparent); */
+        background-color: #000000;
+    }
+}

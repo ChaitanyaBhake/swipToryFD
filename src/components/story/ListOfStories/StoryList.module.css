@@ -1,0 +1,41 @@
+.storiesContainerDiv {
+    margin: 1rem;
+}
+
+.storiesHeading {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.storiesListDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    justify-content: flex-start;
+}
+
+.noStoryAval {
+    text-align: center;
+    color: red;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 950px) {
+    .storiesListDiv {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .storiesHeading {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .storiesListDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

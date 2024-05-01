@@ -1,0 +1,248 @@
+/* Add Stories Form CSS STARTS */
+
+.addStoryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 35%;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.26);
+    background-color: white;
+    z-index: 2;
+    min-width: 550px;
+}
+
+.storyFormHeading {
+    display: none;
+}
+
+.smallHint {
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.slidesDivCon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+}
+
+.slideBoxDiv {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10%;
+    text-align: center;
+    margin-right: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    box-shadow: 0px 4px 15px 0px #0000001a;
+}
+
+.closeStoryFormIcon {
+    position: relative;
+    left: 52%;
+    top: -8rem;
+}
+
+.formError {
+    padding: 1rem;
+    color: red;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Add Stories From CSS ENDS */
+
+/*Slide Form CSS STARTS */
+.slideFormCon,
+.slideFormConDiv {
+    width: 100%;
+}
+
+.slideFormContent {
+    width: 100%;
+}
+
+.inputConDiv {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slideFormLabels {
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.slideFormInputs {
+    width: 75%;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.slideFormInputs:focus {
+    border: 1.5px solid rgb(233, 122, 122);
+}
+
+.slideFormInputs::placeholder {
+    color: #847c7c;
+}
+
+.descriptionInput {
+    width: 75%;
+    height: 20vh;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+.descriptionInput:focus {
+    border: 1.5px solid rgb(233, 122, 122);
+}
+
+option {
+    background: rgba(255, 255, 255, 0.3);
+    color: grey;
+}
+
+.hint2 {
+    color: grey;
+    width: 15%;
+    position: absolute;
+    right: 1%;
+}
+
+/*Slide Form CSS Ends */
+
+@media screen and (max-width: 768px) {
+    /* Add Story Form Media Queries */
+    .addStoryForm {
+        width: 90%;
+        flex-direction: row;
+        min-width: 350px;
+    }
+
+    .storyFormHeading {
+        display: initial;
+        position: absolute;
+        top: 10%;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 2%;
+    }
+
+    .formError {
+        position: absolute;
+        bottom: 2rem;
+    }
+
+    .closeStoryFormIcon {
+        position: absolute;
+        top: 0.8rem;
+        left: 87%;
+    }
+
+    .smallHint {
+        display: none;
+    }
+
+    .slideBoxDiv {
+        padding: 1rem 0.2rem;
+        border-radius: 10%;
+        margin: 0.3rem;
+        margin-right: 1rem;
+        display: inline-flex;
+
+        box-shadow: 0px 4px 15px 0px #0000001a;
+    }
+
+    .buttons > button:nth-child(-n + 2) {
+        display: none; /* HIde the first two buttons on screens wider than 768px */
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Add Story Form Media Queries Ends */
+
+    
+    /* SlideFrom Media Queries */
+
+    .inputConDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slideFormLabels {
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .slideFormInputs {
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    .slidesDivCon {
+        width: 40%;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .descriptionInput {
+        width: 100%;
+        height: 10vh;
+        border: 1px solid black;
+        outline: none;
+        padding: 0.5rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        resize: none;
+    }
+
+    .categories {
+        margin-bottom: 4rem;
+    }
+
+    .hint2 {
+        display: none;
+    }
+
+    .inputHeadingCon {
+        margin-top: 5rem;
+    }
+
+    /* SlideFrom Media Queries Ends */
+}

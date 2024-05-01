@@ -1,0 +1,142 @@
+.authWrapperDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 35%;
+    height: 50%;
+    padding: 5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.26);
+    background-color: white;
+    z-index: 5;
+    min-width: 750px;
+}
+
+.authFormCon {
+    width: 100%;
+}
+
+.authHeading {
+    text-align: center;
+}
+
+.closeSvg {
+    position: relative;
+    left: 101%;
+    top: -3.8rem;
+}
+
+.inputConDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem;
+    position: relative;
+}
+
+.authForm {
+    width: 100%;
+}
+
+.authInput {
+    width: 70%;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.eyeIcon {
+    position: absolute;
+    left: 90%;
+    bottom: 38%;
+}
+
+.authButtonCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonRegisterLogin {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 3rem;
+    background-color: #73abff;
+    color: white;
+    font-weight: bold;
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonRegisterLogin:hover {
+    background-color: #4d8bff;
+}
+
+@media screen and (max-width: 768px) {
+    .authWrapperDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 20%;
+        height: 60%;
+        padding: 2rem;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.26);
+        background-color: white;
+        z-index: 5;
+        min-width: 350px;
+    }
+
+    .eyeIcon {
+        position: absolute;
+        left: 84%;
+        bottom: 32%;
+    }
+
+    .authInput {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .closeSvg {
+        position: relative;
+        left: 99%;
+        top: -3rem;
+    }
+
+    .authHeading {
+        font-size: 1.2rem;
+    }
+
+    .inputConDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+}

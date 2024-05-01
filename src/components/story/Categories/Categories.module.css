@@ -1,0 +1,72 @@
+.categoriesConDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 1rem;
+    overflow-x: hidden; 
+}
+
+.categoryDiv {
+    width: 13%;
+    min-width: 11rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2rem;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.categoryDiv:hover {
+    transform: scale(1.1); 
+}
+
+.categoryName {
+    font-size: 2rem;
+    color: white;  
+}
+
+@media screen and (max-width: 1100px) {
+    .categoriesConDiv {
+        width: 95%;
+        overflow-x: scroll;
+    }
+
+    .categoryName {
+        font-size: 1rem;
+    }
+
+    .categoriesConDiv::-webkit-scrollbar {
+        width: 8px; 
+        height: 2px;
+        background-color: transparent;
+    }
+
+    .categoriesConDiv::-webkit-scrollbar-thumb {
+        background-color: #ff7373; 
+        height: 50px;
+        width: 2px;
+        border-radius: 10px;
+    }
+    .categoryDiv {
+        width: 8rem;
+        height: 6.5rem;
+        padding: 0.3rem 5rem;
+        font-size: 0.8rem;
+    }
+    .categorySelected {
+        border: 0.3rem solid #73abff !important;
+    }
+}

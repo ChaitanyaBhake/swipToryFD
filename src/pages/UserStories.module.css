@@ -1,0 +1,69 @@
+.storyHeading {
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.authHeading {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.userStoriesDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    justify-content: space-around;
+}
+
+.noStoriesAvalDiv {
+    position: absolute;
+    top: 10rem;
+    text-align: center;
+    color: red;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.noStoriesHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .userStoriesDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .storyHeading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .authHeading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .userStoriesDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        justify-content: center;
+    }
+
+    .noStoriesAvalDiv {
+        position: initial;
+    }
+    .noStoriesHeading {
+        margin-bottom: 0.3rem;
+    }
+}
