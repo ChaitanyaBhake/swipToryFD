@@ -26,14 +26,24 @@ axios.defaults.withCredentials = true;
 
 // Action creator to load user data
 export const loadUser = () => async (dispatch) => {
-    // Get username from local storage
+    // Check if token exists in local storage
+    const token = localStorage.getItem('token');
     const username = JSON.parse(localStorage.getItem('username'));
+    if (!token) {
+        // If token does not exist, dispatch loadUserFailure to indicate that user data is not available
+        dispatch(loadUserFailure());
+        return;
+    }
 
     try {
         // Dispatch loadUserRequest action for loading animation
         dispatch(loadUserRequest());
         // Send GET request to load user data
-        const { data } = await axios.get(`/api/user/load/${username}`);
+        const { data } = await axios.get(`/api/user/load/${username}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
         // Dispatch loadUserSuccess action with user data as payload
         dispatch(loadUserSuccess(data));
     } catch (error) {
@@ -57,6 +67,11 @@ export const registerUser = (values) => async (dispatch) => {
         // Dispatch registerSuccess action with registered user data
         dispatch(registerSuccess(data));
 
+         // Include token in request headers for subsequent requests
+         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+        localStorage.setItem('token', data.token);
+
+
         // Store username in local storage
         localStorage.setItem('username', JSON.stringify(data.username));
         
@@ -76,6 +91,7 @@ export const registerUser = (values) => async (dispatch) => {
     }
 };
 
+
 // Action creator to log in a user
 export const loginUser = (values) => async (dispatch) => {
     try {
@@ -89,8 +105,13 @@ export const loginUser = (values) => async (dispatch) => {
         dispatch(loginSuccess(data));
         // Dispatch getStoriesByUser action to fetch user's stories
         dispatch(getStoriesByUser(data.userId));
-        // Store username in local storage
+        // Store token and username in local storage
+        localStorage.setItem('token', data.token);
         localStorage.setItem('username', JSON.stringify(data.username));
+        
+        // Include token in request headers for subsequent requests
+        axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+        
         // Show success toast message
         toast.success('Login Successful', {
             position: 'bottom-left',
@@ -103,7 +124,6 @@ export const loginUser = (values) => async (dispatch) => {
         toast.error(error.response.data);
     }
 };
-
 
 // Action creator to log out a user
 export const logout = () => async (dispatch) => {
